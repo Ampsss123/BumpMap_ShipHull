@@ -305,8 +305,7 @@ function Scene({ model, animations, lightProperties, sceneProperties }) {
       model.traverse((child) => {
         if (child.isMesh) {
           child.material.wireframe = sceneProperties.wireframe;
-  
-          // Apply textures to all meshes whose names start with "Hull" except for "Hull_3"
+
           if (child.name.startsWith('Hull')) {
             applyTextures(child);
           }
